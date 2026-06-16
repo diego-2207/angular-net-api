@@ -1,0 +1,177 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Diego\\AngularApp1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7610CAA2-299C-6E87-DED3-E4137114B093}|AngularApp1.Server\\EspecificacionesTecnicas.Api.csproj|c:\\diego\\angularapp1\\angularapp1.server\\utils\\basicauthenticationhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7610CAA2-299C-6E87-DED3-E4137114B093}|AngularApp1.Server\\EspecificacionesTecnicas.Api.csproj|solutionrelative:angularapp1.server\\utils\\basicauthenticationhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7610CAA2-299C-6E87-DED3-E4137114B093}|AngularApp1.Server\\EspecificacionesTecnicas.Api.csproj|c:\\diego\\angularapp1\\angularapp1.server\\da\\conexiondb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7610CAA2-299C-6E87-DED3-E4137114B093}|AngularApp1.Server\\EspecificacionesTecnicas.Api.csproj|solutionrelative:angularapp1.server\\da\\conexiondb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7610CAA2-299C-6E87-DED3-E4137114B093}|AngularApp1.Server\\EspecificacionesTecnicas.Api.csproj|c:\\diego\\angularapp1\\angularapp1.server\\da\\userdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7610CAA2-299C-6E87-DED3-E4137114B093}|AngularApp1.Server\\EspecificacionesTecnicas.Api.csproj|solutionrelative:angularapp1.server\\da\\userdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7610CAA2-299C-6E87-DED3-E4137114B093}|AngularApp1.Server\\EspecificacionesTecnicas.Api.csproj|c:\\diego\\angularapp1\\angularapp1.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7610CAA2-299C-6E87-DED3-E4137114B093}|AngularApp1.Server\\EspecificacionesTecnicas.Api.csproj|solutionrelative:angularapp1.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7610CAA2-299C-6E87-DED3-E4137114B093}|AngularApp1.Server\\EspecificacionesTecnicas.Api.csproj|c:\\diego\\angularapp1\\angularapp1.server\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7610CAA2-299C-6E87-DED3-E4137114B093}|AngularApp1.Server\\EspecificacionesTecnicas.Api.csproj|solutionrelative:angularapp1.server\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 22,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:139:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:137:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:138:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:139:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:140:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:141:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:137:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:136:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ConexionDB.cs",
+              "DocumentMoniker": "C:\\Diego\\AngularApp1\\AngularApp1.Server\\DA\\ConexionDB.cs",
+              "RelativeDocumentMoniker": "AngularApp1.Server\\DA\\ConexionDB.cs",
+              "ToolTip": "C:\\Diego\\AngularApp1\\AngularApp1.Server\\DA\\ConexionDB.cs",
+              "RelativeToolTip": "AngularApp1.Server\\DA\\ConexionDB.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAqwBQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-16T15:44:39.875Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserDB.cs",
+              "DocumentMoniker": "C:\\Diego\\AngularApp1\\AngularApp1.Server\\DA\\UserDB.cs",
+              "RelativeDocumentMoniker": "AngularApp1.Server\\DA\\UserDB.cs",
+              "ToolTip": "C:\\Diego\\AngularApp1\\AngularApp1.Server\\DA\\UserDB.cs",
+              "RelativeToolTip": "AngularApp1.Server\\DA\\UserDB.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-16T15:44:04.822Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Diego\\AngularApp1\\AngularApp1.Server\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "AngularApp1.Server\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Diego\\AngularApp1\\AngularApp1.Server\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "AngularApp1.Server\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-16T15:36:56.7Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BasicAuthenticationHandler.cs",
+              "DocumentMoniker": "C:\\Diego\\AngularApp1\\AngularApp1.Server\\Utils\\BasicAuthenticationHandler.cs",
+              "RelativeDocumentMoniker": "AngularApp1.Server\\Utils\\BasicAuthenticationHandler.cs",
+              "ToolTip": "C:\\Diego\\AngularApp1\\AngularApp1.Server\\Utils\\BasicAuthenticationHandler.cs",
+              "RelativeToolTip": "AngularApp1.Server\\Utils\\BasicAuthenticationHandler.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAlwDMAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-16T15:12:55.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Diego\\AngularApp1\\AngularApp1.Server\\Program.cs",
+              "RelativeDocumentMoniker": "AngularApp1.Server\\Program.cs",
+              "ToolTip": "C:\\Diego\\AngularApp1\\AngularApp1.Server\\Program.cs",
+              "RelativeToolTip": "AngularApp1.Server\\Program.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAAEQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T19:40:50.921Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

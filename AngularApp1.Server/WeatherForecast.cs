@@ -1,4 +1,4 @@
-namespace AngularApp1.Server
+namespace EspecificacionesTecnicas.Api
 {
     public class WeatherForecast
     {
