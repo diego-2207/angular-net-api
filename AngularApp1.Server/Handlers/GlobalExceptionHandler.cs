@@ -17,7 +17,7 @@ namespace EspecificacionesTecnicas.Api.Handlers
         }
         public async ValueTask<bool> TryHandleAsync(HttpContext httpContext, Exception exception, CancellationToken cancellationToken)
         {
-            //Esto solo loggea las excepciones en la consola de salida.
+            //Esto dispara el log de Serilog
             _logger.LogError(exception, "Ocurrió una excepción no controlada: {Message}", exception.Message);
 
             httpContext.Response.StatusCode = StatusCodes.Status500InternalServerError;
