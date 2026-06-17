@@ -1,10 +1,22 @@
-using EspecificacionesTecnicas.Api.DA;
+using EspecificacionesTecnicas.Api.Handlers;
 using EspecificacionesTecnicas.Api.Utils;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.OpenApi;
 using Scalar.AspNetCore;
-using System.Diagnostics;
+using Serilog;
+
 var builder = WebApplication.CreateBuilder(args);
+//PipeLine para Serilog.
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.Console()
+    .WriteTo.File(
+        path: "Logs/log-.txt", 
+        rollingInterval: RollingInterval.Day,
+        restrictedToMinimumLevel: Serilog.Events.LogEventLevel.Error)
+    .CreateBootstrapLogger();
+
+builder.Host.UseSerilog();
+
 //Añade appsettings a clase de Configuracion.
 Config.Configuration = builder.Configuration;
 // Add services to the container.
@@ -38,7 +50,13 @@ builder.Services.AddAuthentication(schemeName)
     .AddScheme<AuthenticationSchemeOptions, BasicAuthenticationHandler>(schemeName, null);
 
 builder.Services.AddAuthorization();
+// Configuración para manejo global de excepciones
+builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
+builder.Services.AddProblemDetails();
+
 var app = builder.Build();
+// Configuración para manejo global de excepciones
+app.UseExceptionHandler();
 #if DEBUG
 string openApiRoutePattern = "/docs/openapi";
 app.MapOpenApi(openApiRoutePattern);

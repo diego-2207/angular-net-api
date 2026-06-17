@@ -5,7 +5,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Text.Encodings.Web;
 using EspecificacionesTecnicas.Api.DA;
-namespace EspecificacionesTecnicas.Api.Utils
+namespace EspecificacionesTecnicas.Api.Handlers
 {
     public class BasicAuthenticationHandler : AuthenticationHandler<AuthenticationSchemeOptions>
     {
