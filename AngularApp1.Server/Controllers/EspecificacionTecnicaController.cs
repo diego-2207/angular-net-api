@@ -1,7 +1,8 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using EspecificacionesTecnicas.Api.Models.Request;
+using EspecificacionesTecnicas.Api.Service;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using EspecificacionesTecnicas.Api.Models;
-using EspecificacionesTecnicas.Api.DA;
+using System.ComponentModel.DataAnnotations;
 namespace EspecificacionesTecnicas.Api.Controllers
 {
     [Route("api/[controller]")]
@@ -9,10 +10,10 @@ namespace EspecificacionesTecnicas.Api.Controllers
     [ApiController]
     public class EspecificacionTecnicaController : Controller
     {
-        private readonly EspecificacionTecnicaDA _especificacionTecnicaDA;
+        private readonly EspecificacionTecnicaService _service;
         public EspecificacionTecnicaController()
         {
-            _especificacionTecnicaDA = new EspecificacionTecnicaDA();
+            _service = new EspecificacionTecnicaService();
         }
         [Route("listar")]
         [HttpGet]
@@ -22,21 +23,28 @@ namespace EspecificacionesTecnicas.Api.Controllers
         }
         [Route("crear")]
         [HttpPost]
-        public IActionResult CrearEspecificacion([FromBody] EspecificacionTecnica especificacion)
-        {  
-            var respuesta = new RespuestaApi
+        public IActionResult CrearEspecificacion([FromBody] EspecificacionTecnica et)
+        {
+            string codigoET = _service.CrearEspecificacion(et);
+            return Created();
+        }
+        [Route("buscarFormulario")]
+        [HttpGet]
+        public IActionResult BuscarFormulario([Required(ErrorMessage = "El código de la ET es requerido.")]string codigoET)
+        {
+            var especificacion = _service.BuscarETFormulario(codigoET);
+
+            if (especificacion == null)
             {
-                Estado = "Ok",
-                Mensaje = "Creación exitosa."
-            };
-            return Ok(respuesta);
+                return NotFound($"No se encontró una especificación con el código {codigoET}.");
+            }
+            return Ok(especificacion);
         }
         [Route("obtenerMaestros")]
         [HttpGet]
         public IActionResult ObtenerMaestros()
         {
-            throw new Exception("Error al obtener maestros."); // Simulación de error para probar manejo global de excepciones
-            var maestros = _especificacionTecnicaDA.ObtenerMaestros();
+            var maestros = _service.ObtenerMaestros();
             return Ok(maestros);
         }
     }

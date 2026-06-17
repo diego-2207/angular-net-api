@@ -10,6 +10,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Logs\**" />
+    <Content Remove="Logs\**" />
+    <EmbeddedResource Remove="Logs\**" />
+    <None Remove="Logs\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove=".gitignore" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="BCrypt.Net-Next" Version="4.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.9" />
     <PackageReference Include="Microsoft.AspNetCore.SpaProxy">

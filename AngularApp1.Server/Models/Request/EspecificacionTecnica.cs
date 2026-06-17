@@ -1,12 +1,10 @@
-﻿namespace EspecificacionesTecnicas.Api.Models
+﻿namespace EspecificacionesTecnicas.Api.Models.Request
 {
     public class EspecificacionTecnica
     {
         public string CodigoET { get; set; } = string.Empty;
         public string Planta { get; set; } = string.Empty;
         public int CodigoMovex { get; set; }
-        public DateTimeOffset FechaCreacion { get; set; }
-        public DateTimeOffset? FechaModificacion { get; set; } 
         public string VersionET { get; set; } = string.Empty;
         public string NombreProducto { get; set; } = string.Empty;
         public string NombreProductoRotulacion { get; set; } = string.Empty;
@@ -28,6 +26,5 @@
         public string ObservacionesGenerales { get; set; } = string.Empty;
         public int Estado { get; set; }
         public string Autor { get; set; } = string.Empty;
-        public bool Activo { get; set; } 
     }
 }

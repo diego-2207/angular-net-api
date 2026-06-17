@@ -66,8 +66,8 @@ app.MapScalarApiReference("/docs", options => {
     options.AddPreferredSecuritySchemes("BasicAuth")
     .AddHttpAuthentication("BasicAuth", auth =>
     {
-        auth.Username = "global3";
-        auth.Password = "";
+        auth.Username = "diegoM";
+        auth.Password = "123.casa";
     });
 });
 #endif
