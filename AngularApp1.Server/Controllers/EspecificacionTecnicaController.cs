@@ -26,9 +26,13 @@ namespace EspecificacionesTecnicas.Api.Controllers
         public IActionResult CrearEspecificacion([FromBody] EspecificacionTecnica et)
         {
             string codigoET = _service.CrearEspecificacion(et);
-            return Created();
+            return CreatedAtAction(
+                    actionName: nameof(BuscarFormulario),             
+                    routeValues: new { codigoET = codigoET },         
+                    value: null                                   
+                );
         }
-        [Route("buscarFormulario")]
+        [Route("buscar")]
         [HttpGet]
         public IActionResult BuscarFormulario([Required(ErrorMessage = "El código de la ET es requerido.")]string codigoET)
         {

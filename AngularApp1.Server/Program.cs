@@ -12,10 +12,10 @@ Log.Logger = new LoggerConfiguration()
     .WriteTo.File(
         path: "Logs/log-.txt", 
         rollingInterval: RollingInterval.Day,
-        restrictedToMinimumLevel: Serilog.Events.LogEventLevel.Error)
+        restrictedToMinimumLevel: Serilog.Events.LogEventLevel.Error) //Para que solamente se loggeen los errores.
     .CreateBootstrapLogger();
 
-builder.Host.UseSerilog();
+builder.Host.UseSerilog(); //Para que reemplaze el logg por defecto de .Net y utilice Serilog.
 
 //Añade appsettings a clase de Configuracion.
 Config.Configuration = builder.Configuration;
@@ -57,7 +57,7 @@ builder.Services.AddProblemDetails();
 var app = builder.Build();
 // Configuración para manejo global de excepciones
 app.UseExceptionHandler();
-#if DEBUG
+
 string openApiRoutePattern = "/docs/openapi";
 app.MapOpenApi(openApiRoutePattern);
 //Configuración para SCALAR
@@ -70,7 +70,7 @@ app.MapScalarApiReference("/docs", options => {
         auth.Password = "123.casa";
     });
 });
-#endif
+
 app.UseDefaultFiles();
 app.MapStaticAssets();
 

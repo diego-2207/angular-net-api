@@ -2,6 +2,6 @@
 {
     public static class Config
     {
-        public static ConfigurationManager Configuration { get; set; } 
+        public static ConfigurationManager? Configuration { get; set; }
     }
 }

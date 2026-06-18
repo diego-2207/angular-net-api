@@ -7,13 +7,7 @@ namespace EspecificacionesTecnicas.Api.DA
 {
     public class EspecificacionTecnicaDA
     {
-        private readonly ConexionDB _conexion;
-
-        public EspecificacionTecnicaDA()
-        {
-            _conexion = new ConexionDB(); // Inyectado automáticamente
-        }
-
+        private readonly ConexionDB _conexion = new ConexionDB();
         public List<Maestro> ObtenerMaestros() { 
             using var connection = _conexion.GetConnection();
             using var cmd = connection.CreateCommand();
