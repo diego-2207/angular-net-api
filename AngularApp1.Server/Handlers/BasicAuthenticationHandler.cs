@@ -61,5 +61,13 @@ namespace EspecificacionesTecnicas.Api.Handlers
             // y comprueba si coinciden.
             return BCrypt.Net.BCrypt.Verify(password, storedPassword);
         }
+
+        protected override async Task HandleChallengeAsync(AuthenticationProperties properties)
+        {
+            Response.StatusCode = 401;
+            // Esto es lo que despierta la ventana flotante del navegador
+            Response.Headers.Append("WWW-Authenticate", "Basic realm=\"EspecificacionesTecnicas API\"");
+            await Response.WriteAsync("Se requiere autenticacion para acceder a este recurso.");
+        }
     }
 }

@@ -69,7 +69,7 @@ app.MapScalarApiReference("/docs", options => {
         auth.Username = "diegoM";
         auth.Password = "123.casa";
     });
-});
+}).RequireAuthorization();
 
 app.UseDefaultFiles();
 app.MapStaticAssets();
