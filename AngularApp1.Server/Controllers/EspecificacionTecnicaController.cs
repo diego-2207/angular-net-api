@@ -19,11 +19,12 @@ namespace EspecificacionesTecnicas.Api.Controllers
         [HttpGet]
         public IActionResult Listar()
         {
-            return View();
+            var listado = _service.Listar();
+            return Ok(listado);
         }
         [Route("crear")]
         [HttpPost]
-        public IActionResult CrearEspecificacion([FromBody] EspecificacionTecnica et)
+        public IActionResult CrearEspecificacion([FromBody] EspecificacionCreacion et)
         {
             string codigoET = _service.CrearEspecificacion(et);
             return CreatedAtAction(

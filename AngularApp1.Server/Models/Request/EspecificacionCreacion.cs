@@ -1,6 +1,6 @@
 ﻿namespace EspecificacionesTecnicas.Api.Models.Request
 {
-    public class EspecificacionTecnica
+    public class EspecificacionCreacion
     {
         public string CodigoET { get; set; } = string.Empty;
         public string Planta { get; set; } = string.Empty;

@@ -1,7 +1,7 @@
 ﻿using EspecificacionesTecnicas.Api.DA;
-using EspecificacionesTecnicas.Api.Models;
 using EspecificacionesTecnicas.Api.Models.Mantenedores;
 using EspecificacionesTecnicas.Api.Models.Request;
+using EspecificacionesTecnicas.Api.Models.Response;
 
 namespace EspecificacionesTecnicas.Api.Service
 {
@@ -18,13 +18,17 @@ namespace EspecificacionesTecnicas.Api.Service
         {
             return _da.ObtenerMaestros();
         }
-        public string CrearEspecificacion(EspecificacionTecnica especificacion)
+        public string CrearEspecificacion(EspecificacionCreacion especificacion)
         {
             return _da.CrearEspecificacion(especificacion);
         }
         public EspecificacionLectura BuscarETFormulario(string codigoET)
         {
             return _da.BuscarETFormulario(codigoET);
+        }
+        public List<EspecificacionListado> Listar()
+        {
+            return _da.Listar();
         }
     }
 }

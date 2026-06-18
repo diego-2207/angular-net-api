@@ -1,8 +1,8 @@
 ﻿using EspecificacionesTecnicas.Api.Models.Mantenedores;
-using EspecificacionesTecnicas.Api.Models;
 using System.Data;
 using EspecificacionesTecnicas.Api.Models.Request;
 using Microsoft.AspNetCore.Http.HttpResults;
+using EspecificacionesTecnicas.Api.Models.Response;
 namespace EspecificacionesTecnicas.Api.DA
 {
     public class EspecificacionTecnicaDA
@@ -22,9 +22,9 @@ namespace EspecificacionesTecnicas.Api.DA
                 {
                     maestros.Add(new Maestro
                     {
-                        Id = reader["Id"].ToString(),
-                        Descripcion = reader["Descripcion"].ToString(),
-                        Tipo = reader["Tipo"].ToString()
+                        Id = (string)reader["Id"],
+                        Descripcion = (string)reader["Descripcion"],
+                        Tipo = (string)reader["Tipo"]
                     });
                 }
             } while (reader.NextResult());
@@ -36,10 +36,9 @@ namespace EspecificacionesTecnicas.Api.DA
         /// </summary>
         /// <param name="et">Objeto que contiene todos los campos necesarios para crear una Especificación Técnica.</param>
         /// <returns>El código de la Especificación Creada.</returns>
-        public string CrearEspecificacion(EspecificacionTecnica et)
+        public string CrearEspecificacion(EspecificacionCreacion et)
         {
-            ConexionDB db = new ConexionDB();
-            using var connection = db.GetConnection();
+            using var connection = _conexion.GetConnection();
             using var cmd = connection.CreateCommand();
 
             cmd.CommandText = "[SP_ET_CREAR]";
@@ -75,10 +74,9 @@ namespace EspecificacionesTecnicas.Api.DA
             return et.CodigoET;
         }
         
-        public EspecificacionLectura BuscarETFormulario(string codigoET)
+        public EspecificacionLectura? BuscarETFormulario(string codigoET)
         {
-            ConexionDB db = new ConexionDB();
-            using var connection = db.GetConnection();
+            using var connection = _conexion.GetConnection();
             using var cmd = connection.CreateCommand();
             cmd.CommandText = "[SP_ET_BUSCAR_FORMULARIO]";
             cmd.CommandType = CommandType.StoredProcedure;
@@ -117,9 +115,35 @@ namespace EspecificacionesTecnicas.Api.DA
                 ObservacionesGenerales = (string)reader["Observaciones_Generales"],
                 Estado = (int)reader["Estado"],
                 Autor = (string)reader["Autor"],
+                Activo = (bool)reader["Activo"]
             };
 
             return especificacion;
+        }
+        public List<EspecificacionListado> Listar()
+        {
+            using var con = _conexion.GetConnection();
+            using var cmd = con.CreateCommand();
+            cmd.CommandText = "[SP_ET_LISTAR]";
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            using var reader = cmd.ExecuteReader();
+            var listado = new List<EspecificacionListado>();
+            while (reader.Read())
+            {
+                var et = new EspecificacionListado
+                {
+                    CodigoET = (string)reader["Codigo_ET"],
+                    NombreProducto = (string)reader["Nombre_Producto"],
+                    FechaCreacion = (DateTimeOffset)reader["Fecha_Creacion"],
+                    FechaModificacion = reader.IsDBNull("Fecha_Modificacion")
+                                        ? null
+                                        : (DateTimeOffset)reader["Fecha_Modificacion"]
+                };
+                listado.Add(et);
+            }
+
+            return listado;
         }
     }
 }
